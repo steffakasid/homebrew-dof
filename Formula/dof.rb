@@ -5,21 +5,21 @@
 class Dof < Formula
   desc "Manage your dot files as a git bare repo"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.73"
+  version "0.74"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/dof/releases/download/0.73/dof_0.73_Darwin_arm64.tar.gz"
-      sha256 "54fa442d4025c461991ecef0e7a60aecba1a18d841e6ba84af8b9fd399bbcf60"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/dof/releases/download/v0.74/dof_0.74_Darwin_x86_64.tar.gz"
+      sha256 "4e4c3b8f497bd2cecd381431caf8ef2d8ebae24374b203c2b94b0dcfd1456f64"
 
       def install
         bin.install "dof"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/dof/releases/download/0.73/dof_0.73_Darwin_x86_64.tar.gz"
-      sha256 "98a71f8c16a730f4759434db550e5cb5eee25a27513630e91211918c145523da"
+    if Hardware::CPU.arm?
+      url "https://github.com/steffakasid/dof/releases/download/v0.74/dof_0.74_Darwin_arm64.tar.gz"
+      sha256 "bceb2bedd2f5adcb8759f3b74f1cc374a1bec24fe52b4b55bdea166e88205c24"
 
       def install
         bin.install "dof"
@@ -28,17 +28,17 @@ class Dof < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/dof/releases/download/0.73/dof_0.73_Linux_x86_64.tar.gz"
-      sha256 "2381526b11e02ed4b69f938140b8af83fa95b050694a8ce7d541bd544563be3f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/dof/releases/download/v0.74/dof_0.74_Linux_arm64.tar.gz"
+      sha256 "d71b8a1600d2c513890161c10070f57b13235b9d2c8123a08f27260a95cb2f73"
 
       def install
         bin.install "dof"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/dof/releases/download/0.73/dof_0.73_Linux_arm64.tar.gz"
-      sha256 "573770be73db21fbfc3462cc8cf5a442f026b29a4641b1ef5c170a347f4a4d1e"
+    if Hardware::CPU.intel?
+      url "https://github.com/steffakasid/dof/releases/download/v0.74/dof_0.74_Linux_x86_64.tar.gz"
+      sha256 "dcf9c8fa7eeb2452cb2d8e983ad839080ea60394cf5e046a05a78c36668f6b1c"
 
       def install
         bin.install "dof"
