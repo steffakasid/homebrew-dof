@@ -5,21 +5,21 @@
 class Dof < Formula
   desc "Manage your dot files as a git bare repo"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.79"
+  version "0.80"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/dof/releases/download/0.79/dof_0.79_Darwin_x86_64.tar.gz"
-      sha256 "94cac74ac81fdd21286d729b49cd819db0186280aa07434b6e2d12a720c26774"
+      url "https://github.com/steffakasid/dof/releases/download/0.80/dof_0.80_Darwin_x86_64.tar.gz"
+      sha256 "ec57198cd2ef4b6fe9f50c8d9e0f8141a96fbb5f8f057236c05d77ff9af90860"
 
       def install
         bin.install "dof"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/dof/releases/download/0.79/dof_0.79_Darwin_arm64.tar.gz"
-      sha256 "a5a41f3dd139d8eb8385fd020d13301cf7eddb3f7db16e3b99f9c0c406bde7f5"
+      url "https://github.com/steffakasid/dof/releases/download/0.80/dof_0.80_Darwin_arm64.tar.gz"
+      sha256 "3a062478e707207e69ce67e8401dfd0a15f3d03838bce5feadf8dae9e2fa4e42"
 
       def install
         bin.install "dof"
@@ -29,16 +29,16 @@ class Dof < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/steffakasid/dof/releases/download/0.79/dof_0.79_Linux_arm64.tar.gz"
-      sha256 "7f1944fd9c84bb613ef7bd835c89226196da7d64e53cce8d3b113cdc8d21a4c2"
+      url "https://github.com/steffakasid/dof/releases/download/0.80/dof_0.80_Linux_arm64.tar.gz"
+      sha256 "17a41e406667923d61fce6fdb09703eb97c2df02e6fd382b4f1e40d285a51aee"
 
       def install
         bin.install "dof"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/dof/releases/download/0.79/dof_0.79_Linux_x86_64.tar.gz"
-      sha256 "c7094810b81a51c0841269224ed7e8259626269c0976a74f96581a4c59ad2e24"
+      url "https://github.com/steffakasid/dof/releases/download/0.80/dof_0.80_Linux_x86_64.tar.gz"
+      sha256 "b006dd691af9a233936ec16a71422112262914bc41b3fb5bc6dcf6289640ff3d"
 
       def install
         bin.install "dof"
