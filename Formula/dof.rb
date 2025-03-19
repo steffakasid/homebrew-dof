@@ -5,21 +5,21 @@
 class Dof < Formula
   desc "Manage your dot files as a git bare repo"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.89"
+  version "0.90"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/dof/releases/download/v0.89/dof_0.89_darwin_amd64.tar.gz"
-      sha256 "6dcce409d7d542c58a9ac55d71524fea6392a6032e0024b9e069c022d3801683"
+      url "https://github.com/steffakasid/dof/releases/download/v0.90/dof_0.90_darwin_amd64.tar.gz"
+      sha256 "2d69d0d705c981bbdefc745743163fb60e62f64844a9ec9f85ccec4d5c9c36b1"
 
       def install
         bin.install "dof"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/dof/releases/download/v0.89/dof_0.89_darwin_arm64.tar.gz"
-      sha256 "eb24e2a0c7b110d7ef3e4fa35fded4b26e56683c7bc6cc97ff5eddb6c32d55af"
+      url "https://github.com/steffakasid/dof/releases/download/v0.90/dof_0.90_darwin_arm64.tar.gz"
+      sha256 "6b96cc3974605d7d3b875c33dfa0c248edb34fd5826a53ebca81d4476b2f596a"
 
       def install
         bin.install "dof"
@@ -30,8 +30,8 @@ class Dof < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/dof/releases/download/v0.89/dof_0.89_linux_amd64.tar.gz"
-        sha256 "9f54577a4a3ca18d5799d14fe79b814058d55b64dc09b214f10d5d4f633a67d2"
+        url "https://github.com/steffakasid/dof/releases/download/v0.90/dof_0.90_linux_amd64.tar.gz"
+        sha256 "0e32bc4fb0b73084e83f2efd361e2a4740b5ebc2fa7e1dc27b8b21d40375f915"
 
         def install
           bin.install "dof"
@@ -40,8 +40,8 @@ class Dof < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/dof/releases/download/v0.89/dof_0.89_linux_arm64.tar.gz"
-        sha256 "0093d1186f5b56ad1e861d5c3b3d6d95e5a03aab5eac7b3ee9ca3c22fde8f9e5"
+        url "https://github.com/steffakasid/dof/releases/download/v0.90/dof_0.90_linux_arm64.tar.gz"
+        sha256 "f4c7ad92d3fccbe858444ac84212ff23f2bb216b22b52aeba7311acbb6deea08"
 
         def install
           bin.install "dof"
