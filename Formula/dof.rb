@@ -5,21 +5,21 @@
 class Dof < Formula
   desc "Manage your dot files as a git bare repo"
   homepage "https://github.com/steffakasid/trivy-project-scanner"
-  version "0.90"
+  version "0.91"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/steffakasid/dof/releases/download/v0.90/dof_0.90_darwin_amd64.tar.gz"
-      sha256 "2d69d0d705c981bbdefc745743163fb60e62f64844a9ec9f85ccec4d5c9c36b1"
+      url "https://github.com/steffakasid/dof/releases/download/v0.91/dof_0.91_darwin_amd64.tar.gz"
+      sha256 "b20ebb6f881590f46ce004e818a621da6402731f121fa103bfc339ea61ec1911"
 
       def install
         bin.install "dof"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/steffakasid/dof/releases/download/v0.90/dof_0.90_darwin_arm64.tar.gz"
-      sha256 "6b96cc3974605d7d3b875c33dfa0c248edb34fd5826a53ebca81d4476b2f596a"
+      url "https://github.com/steffakasid/dof/releases/download/v0.91/dof_0.91_darwin_arm64.tar.gz"
+      sha256 "0215315ef688c93de9069a3257ea98586ddd6c2ef8cca908e4f9a88fcdd2a456"
 
       def install
         bin.install "dof"
@@ -28,24 +28,18 @@ class Dof < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/dof/releases/download/v0.90/dof_0.90_linux_amd64.tar.gz"
-        sha256 "0e32bc4fb0b73084e83f2efd361e2a4740b5ebc2fa7e1dc27b8b21d40375f915"
-
-        def install
-          bin.install "dof"
-        end
+    if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/dof/releases/download/v0.91/dof_0.91_linux_amd64.tar.gz"
+      sha256 "9e3d4d0efa3f4e54b85dc4555b6bd4ac15635af749918f6a9988eb85ae69e5f0"
+      def install
+        bin.install "dof"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/steffakasid/dof/releases/download/v0.90/dof_0.90_linux_arm64.tar.gz"
-        sha256 "f4c7ad92d3fccbe858444ac84212ff23f2bb216b22b52aeba7311acbb6deea08"
-
-        def install
-          bin.install "dof"
-        end
+    if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
+      url "https://github.com/steffakasid/dof/releases/download/v0.91/dof_0.91_linux_arm64.tar.gz"
+      sha256 "24900df87c801c84ceb1546eaf13dbadf4ad1d7265a4ae7b836705e9c53d5289"
+      def install
+        bin.install "dof"
       end
     end
   end
